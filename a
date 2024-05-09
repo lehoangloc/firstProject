@@ -1,0 +1,21 @@
+var express = require('express');
+const session = require('express-session');
+var app = express();
+let path = require("path");
+var bodyPraser = require('body-parser');
+app.use(express.urlencoded({extended: true, limit: '1mb'})); 
+let pdf = require("html-pdf");
+const fs = require('fs');
+// set the view engine to ejs
+let ejs = require("ejs");
+app.set('view engine', 'ejs');
+// use res.render to load up an ejs view file
+const moment = require('moment');
+// hash User/Password
+const bcrypt = require('bcrypt');
+
+app.use(session({ //API Session
+  secret: 'secret-key',
+  resave: false,
+  saveUninitialized: true
+}));
