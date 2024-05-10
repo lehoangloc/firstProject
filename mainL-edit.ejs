@@ -1,0 +1,259 @@
+<style>
+    .main_left {
+      color: darkblue;
+      font-family: verdana;
+      font-size: 10px;
+      height: 96%;
+      width: 20%;
+      float: left;
+      border: 1px solid black;
+      margin: 0.5%;
+      
+      position: static;
+
+    }
+    .font_adjust{
+        font-size: 11px;
+        font-weight: bold;
+        padding-bottom: 5px;
+        color: #34029f;
+        
+    }
+
+    .font_input{
+        height: 36px;
+        width: 96%;
+        font-size: 11px;
+       font-family: tahoma
+    }
+
+    .custom-select {
+        padding: 5px 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 11px;
+        width: 200px;
+    }
+
+    .custom-select:focus {
+        outline: none;
+        border-color: #aaa;
+    }
+
+    /* Tuỳ chỉnh giao diện cho các tùy chọn */
+    .custom-select option {
+        padding: 8px;   
+    }
+
+    /* Tuỳ chỉnh giao diện khi lựa chọn được chọn */
+    .custom-select option:checked {
+        background-color: #e0e0e0;
+    }
+
+</style>
+
+<body>
+
+    <div class = "main_left"> 
+    	<div style=" font-size: 2em; font-weight: bold; padding-top: 15px; padding-bottom: 15px; color: purple;">
+			Chỉnh sửa nội dung
+		</div>
+
+        <div>
+            <form action="/update/<%=id%>" method="post">
+                <% if (id < 2000) { %>
+                    <div>
+                        <label class = "font_adjust">Tên sự kiện:</label>
+                        <input type="text" name="name" placeholder="enter name" id="name" class = "font_input"
+                        value="<%= dataT01 && dataT01.name ? dataT01.name : '' %>">
+                    </div>
+                    <div>
+                        <label class = "font_adjust">Nội dung chi tiết:</label>
+                        <input type="detail" name="detail" placeholder="enter detail" id="detail" class = "font_input"
+                        value="<%= dataT01 && dataT01.detail ? dataT01.detail : '' %>">
+                    </div>
+
+                <% } else if (id < 3000) { %>
+                    <div>
+                        <label class = "font_adjust">Tên chương trình:</label>
+                        <input type="text" name="name" placeholder="enter name" id="name" class = "font_input"
+                        value="<%= dataT02.name %>">
+                    </div>
+                    <div>
+                        <label class = "font_adjust">Nội dung chi tiết:</label>
+                        <input type="detail" name="detail" placeholder="enter detail" id="detail" class = "font_input"
+                        value="<%= dataT02.detail %>">
+                    </div>
+                
+                <% } else if (id < 4000) { %>
+                    <div>
+                        <label class = "font_adjust">Tên chương trình:</label>
+                        <input type="text" name="name" placeholder="enter name" id="name" class = "font_input"
+                        value="<%= dataT03.name %>">
+                    </div>
+                    <div>
+                        <label class = "font_adjust">Nội dung chi tiết:</label>
+                        <input type="detail" name="detail" placeholder="enter detail" id="detail" class = "font_input"
+                        value="<%= dataT03.detail %>">
+                    </div>
+                
+                <% } else if (id < 5000) { %>
+                    <div>
+                        <label class = "font_adjust">Tên chương trình:</label>
+                        <input type="text" name="name" placeholder="enter name" id="name" class = "font_input"
+                        value="<%= dataT04.name %>">
+                    </div>
+                    <div>
+                        <label class = "font_adjust">Nội dung chi tiết:</label>
+                        <input type="detail" name="detail" placeholder="enter detail" id="detail" class = "font_input"
+                        value="<%= dataT04.detail %>">
+                    </div>
+
+                <% } else if (id < 6000) { %>
+                        <div>
+                            <label class = "font_adjust">Tên chương trình:</label>
+                            <input type="text" name="name" placeholder="enter name" id="name" class = "font_input"
+                            value="<%= dataT05.name %>">
+                        </div>
+                        <div>
+                            <label class = "font_adjust">Nội dung chi tiết:</label>
+                            <input type="detail" name="detail" placeholder="enter detail" id="detail" class = "font_input"
+                            value="<%= dataT05.detail %>">
+                        </div>
+
+                <% } else if (id < 7000) { %>
+                        <div>
+                            <label class = "font_adjust">Tên chương trình:</label>
+                            <input type="text" name="name" placeholder="enter name" id="name" class = "font_input"
+                            value="<%= dataT06.name %>">
+                        </div>
+                        <div>
+                            <label class = "font_adjust">Nội dung chi tiết:</label>
+                            <input type="detail" name="detail" placeholder="enter detail" id="detail" class = "font_input"
+                            value="<%= dataT06.detail %>">
+                        </div>
+
+                <% } else if (id < 8000) { %>
+                        <div>
+                            <label class = "font_adjust">Tên chương trình:</label>
+                            <input type="text" name="name" placeholder="enter name" id="name" class = "font_input"
+                            value="<%= dataT07.name %>">
+                        </div>
+                        <div>
+                            <label class = "font_adjust">Nội dung chi tiết:</label>
+                            <input type="detail" name="detail" placeholder="enter detail" id="detail" class = "font_input"
+                            value="<%= dataT07.detail %>">
+                        </div>
+
+                <% } else if (id < 9000) { %>
+                        <div>
+                            <label class = "font_adjust">Tên chương trình:</label>
+                            <input type="text" name="name" placeholder="enter name" id="name" class = "font_input"
+                            value="<%= dataT08.name %>">
+                        </div>
+                        <div>
+                            <label class = "font_adjust">Nội dung chi tiết:</label>
+                            <input type="detail" name="detail" placeholder="enter detail" id="detail" class = "font_input"
+                            value="<%= dataT08.detail %>">
+                        </div>
+
+                <% } else if (id < 10000) { %>
+                        <div>
+                            <label class = "font_adjust">Tên chương trình:</label>
+                            <input type="text" name="name" placeholder="enter name" id="name" class = "font_input"
+                            value="<%= dataT09.name %>">
+                        </div>
+                        <div>
+                            <label class = "font_adjust">Nội dung chi tiết:</label>
+                            <input type="detail" name="detail" placeholder="enter detail" id="detail" class = "font_input"
+                            value="<%= dataT09.detail %>">
+                        </div>
+
+                <% } else if (id < 11000) { %>
+                        <div>
+                            <label class = "font_adjust">Tên chương trình:</label>
+                            <input type="text" name="name" placeholder="enter name" id="name" class = "font_input"
+                            value="<%= dataT10.name %>">
+                        </div>
+                        <div>
+                            <label class = "font_adjust">Nội dung chi tiết:</label>
+                            <input type="detail" name="detail" placeholder="enter detail" id="detail" class = "font_input"
+                            value="<%= dataT10.detail %>">
+                        </div>
+
+                <% } else if (id < 12000) { %>
+                        <div>
+                            <label class = "font_adjust">Tên chương trình:</label>
+                            <input type="text" name="name" placeholder="enter name" id="name" class = "font_input"
+                            value="<%= dataT11.name %>">
+                        </div>
+                        <div>
+                            <label class = "font_adjust">Nội dung chi tiết:</label>
+                            <input type="detail" name="detail" placeholder="enter detail" id="detail" class = "font_input"
+                            value="<%= dataT11.detail %>">
+                        </div>
+                
+                <% } else if (id >= 12000) { %>
+                        <div>
+                            <label class = "font_adjust">Tên chương trình:</label>
+                            <input type="text" name="name" placeholder="enter name" id="name" class = "font_input"
+                            value="<%= dataT12.name %>">
+                        </div>
+                        <div>
+                            <label class = "font_adjust">Nội dung chi tiết:</label>
+                            <input type="detail" name="detail" placeholder="enter detail" id="detail" class = "font_input"
+                            value="<%= dataT12.detail %>">
+                        </div>
+                <% } %>
+
+                <div>
+                    <input type="submit" value="Lưu"/>
+                    <input type="button" value="Hủy" onclick="return_home('')"/>
+                    <!-- <input type="button" value="Thêm người tham gia (Ko cần thiết)" onclick=""/> -->
+                    <script>
+                        function return_home(){window.location.href = "/home";}
+                    </script>
+                    
+                    
+                </div>
+
+            </form>
+
+        </div>
+
+        <!-- <div>
+            <br><br><label class = "font_adjust" style="color: red;">Tạo Thành Viên mới (Đang thực hiện):</label> <br>
+            <label class = "font_adjust">Họ Tên:</label>
+            <input type="text" name="" placeholder="enter name" id="" class = "font_input" >
+            <label class = "font_adjust">Đơn vị:</label>
+            <input type="text" name="" placeholder="enter name" id="" class = "font_input" >
+        </div> -->
+        
+        <div>
+            <form action="/add/<%= id %>" method="post">
+                <br><br>
+                <label class="font_adjust" style="color: red;">Thêm Thành Viên:</label> <br>
+                <select id="mySelect" class="custom-select" name='{"user_id": "", "full_name": ""}'>
+                    <option value="">Lựa chọn</option>
+                  <% fullNames.forEach((full_name, index) => { %>
+                    <% const encodedFullName = encodeURIComponent(full_name); %>
+                    <option value='{"user_id": "<%= memUserID[index] %>", "full_name": "<%= encodedFullName %>"}'>
+                      <%= memUserID[index] %> - <%= full_name %>
+                    </option>
+                  <% }); %>            
+                </select>
+                <input type="submit" value="Thêm" onclick="validateForm(event)">
+              </form>
+              <script>
+                function validateForm(event) {
+                  var selectValue = document.getElementById("mySelect").value;
+                  if (selectValue === "") {
+                    event.preventDefault(); // Ngăn chặn việc submit nếu giá trị chọn là "Lựa chọn"
+                  }
+                }
+              </script>
+        </div>
+        
+    </div>
+    
+</body>
